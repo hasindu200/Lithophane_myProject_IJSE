@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="context" prefHeight="748.0" prefWidth="1031.0" style="-fx-background-color: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ItemController">
+   <children>
+      <Text fill="WHITE" layoutX="36.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Item">
+         <font>
+            <Font name="System Bold" size="41.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="36.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Item Code            :">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Text>
+      <TextField fx:id="itemCode" layoutX="223.0" layoutY="60.0" prefHeight="37.0" prefWidth="270.0" promptText="Item Code" />
+      <Text fill="WHITE" layoutX="521.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Material ID   :">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="36.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Unit Price             :">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Text>
+      <TextField fx:id="unitPrice" layoutX="223.0" layoutY="116.0" prefHeight="37.0" prefWidth="270.0" promptText="Unit Price" />
+      <Text fill="WHITE" layoutX="521.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Qty               :">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Text>
+      <TextField fx:id="qty" layoutX="679.0" layoutY="116.0" prefHeight="37.0" prefWidth="316.0" promptText="Qty" />
+      <Text fill="WHITE" layoutX="36.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Item Description  :">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Text>
+      <TextField fx:id="itemDesc" layoutX="223.0" layoutY="178.0" prefHeight="37.0" prefWidth="773.0" promptText="Item Description" />
+      <TableView fx:id="itemItemTable" layoutX="36.0" layoutY="247.0" prefHeight="425.0" prefWidth="962.0">
+        <columns>
+          <TableColumn fx:id="tblitemcode" prefWidth="142.0" text="Item Code" />
+          <TableColumn fx:id="tblmaterilalId" prefWidth="169.0" text="Material Id" />
+            <TableColumn fx:id="tblunitprice" prefWidth="194.0" text="Unit Price" />
+            <TableColumn fx:id="tblqty" prefWidth="164.0" text="Qty" />
+            <TableColumn fx:id="tblitemDesc" prefWidth="282.0" text="Item Description" />
+        </columns>
+      </TableView>
+      <Button layoutX="66.0" layoutY="684.0" mnemonicParsing="false" onAction="#addItemOnAction" prefHeight="37.0" prefWidth="177.0" style="-fx-background-color: #20bf6b;" text="Add Item" />
+      <Button layoutX="405.0" layoutY="684.0" mnemonicParsing="false" onAction="#UpdateItem" prefHeight="37.0" prefWidth="177.0" style="-fx-background-color: #fed330;" text="Update Item" />
+      <Button layoutX="746.0" layoutY="684.0" mnemonicParsing="false" onAction="#deleteItemAction" prefHeight="37.0" prefWidth="177.0" style="-fx-background-color: red;" text="Delete Item" textFill="WHITE" />
+      <ComboBox fx:id="matrialid" layoutX="678.0" layoutY="58.0" prefHeight="37.0" prefWidth="316.0" />
+   </children>
+</AnchorPane>

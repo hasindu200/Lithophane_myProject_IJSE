@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="context" prefHeight="770.0" prefWidth="1070.0" style="-fx-background-color: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CurrentCalculator">
+   <children>
+      <Text fill="WHITE" layoutX="24.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The Price Spent to Create the Product.">
+         <font>
+            <Font name="System Bold" size="40.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="34.0" layoutY="156.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Printer Wattage  (W)         :">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <TextField fx:id="PrinterWattage" layoutX="347.0" layoutY="129.0" prefHeight="37.0" prefWidth="343.0" promptText="Print Wattage" />
+      <Text fill="WHITE" layoutX="35.0" layoutY="243.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Job Hours                         :">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <TextField fx:id="JobHours" layoutX="347.0" layoutY="217.0" prefHeight="37.0" prefWidth="343.0" promptText="Job Hours" />
+      <Text fill="WHITE" layoutX="38.0" layoutY="328.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Weight of Filament  (g)    :">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <TextField fx:id="lenthOfFilament" layoutX="347.0" layoutY="301.0" prefHeight="37.0" prefWidth="343.0" promptText="Length of Filment" />
+      <Text fill="WHITE" layoutX="39.0" layoutY="682.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Amount Spent    : ">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="38.0" layoutY="616.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Filament Cost   :">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="42.0" layoutY="531.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Electricity    :">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Text>
+      <Button layoutX="820.0" layoutY="471.0" mnemonicParsing="false" onAction="#calculateOnAction" prefHeight="37.0" prefWidth="173.0" style="-fx-background-color: red;" text="Calculate" textFill="WHITE" />
+      <Label fx:id="disElectricity" layoutX="242.0" layoutY="508.0" prefHeight="32.0" prefWidth="173.0" text="Label" textFill="WHITE">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+      <Label fx:id="disFilamentCost" layoutX="274.0" layoutY="586.0" prefHeight="32.0" prefWidth="173.0" text="Label" textFill="WHITE">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+      <Label fx:id="disAmount" layoutX="354.0" layoutY="651.0" prefHeight="32.0" prefWidth="173.0" text="Label" textFill="WHITE">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+      <Text fill="WHITE" layoutX="37.0" layoutY="413.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Job Hours                         :">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <TextField fx:id="JobHours1" layoutX="356.0" layoutY="393.0" prefHeight="37.0" prefWidth="343.0" promptText="Job Hours" />
+   </children>
+</AnchorPane>

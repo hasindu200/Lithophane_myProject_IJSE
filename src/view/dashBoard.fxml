@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="root" prefHeight="832.0" prefWidth="1263.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.dashBoardController">
+   <children>
+      <Pane fx:id="context" layoutX="193.0" layoutY="54.0" prefHeight="778.0" prefWidth="1070.0" style="-fx-background-color: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="193.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="54.0" />
+      <AnchorPane layoutX="193.0" prefHeight="67.0" prefWidth="1070.0" style="-fx-background-color: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);" stylesheets="@../css/StyleSheet.css" AnchorPane.leftAnchor="193.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <ImageView fitHeight="48.0" fitWidth="49.0" layoutX="735.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="62.0">
+               <image>
+                  <Image url="@../img/FB_IMG_1631006642439.jpg" />
+               </image>
+            </ImageView>
+            <Text fill="WHITE" layoutX="28.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Litho Phane S.L">
+               <font>
+                  <Font name="Tw Cen MT Condensed" size="50.0" />
+               </font>
+            </Text>
+            <ImageView fx:id="btnClose" fitHeight="48.0" fitWidth="48.0" layoutX="970.0" layoutY="10.0" onMouseClicked="#clasoOnAction" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="6.0">
+               <image>
+                  <Image url="@../img/exit.png" />
+               </image>
+            </ImageView>
+         </children>
+         <styleClass>
+            <String fx:value="topbar" />
+            <String fx:value="topbar" />
+         </styleClass>
+      </AnchorPane>
+      <AnchorPane layoutY="14.0" prefHeight="832.0" prefWidth="194.0" style="-fx-background-color: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);" styleClass="sidebar" stylesheets="@../css/StyleSheet.css" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="48.0" fitWidth="48.0" layoutX="57.0" layoutY="573.0" onMouseClicked="#calculationOnAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/icons8-electricity-100.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="48.0" fitWidth="48.0" layoutX="64.0" layoutY="57.0" onMouseClicked="#customerFrom" pickOnBounds="true" preserveRatio="true" AnchorPane.topAnchor="57.0">
+               <image>
+                  <Image url="@../img/icons8-user-90.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="48.0" fitWidth="48.0" layoutX="64.0" layoutY="166.0" onMouseClicked="#MaterialOnAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/icons8-delivery-box-64.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="48.0" fitWidth="48.0" layoutX="58.0" layoutY="357.0" onMouseClicked="#deliveryOnAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/icons8-delivery-100.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="48.0" fitWidth="56.0" layoutX="57.0" layoutY="692.0" onMouseClicked="#logOutOnAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/icons8-logout-rounded-left-90.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="48.0" fitWidth="48.0" layoutX="57.0" layoutY="275.0" onMouseClicked="#addItemOnAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/icons8-3d-printer-80.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="48.0" fitWidth="60.0" layoutX="57.0" layoutY="461.0" onMouseClicked="#customerOnAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/icons8-order-64.png" />
+               </image>
+            </ImageView>
+            <Text fill="WHITE" layoutX="27.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Customer">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="33.0" layoutY="251.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Material">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="42.0" layoutY="343.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Item">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="25.0" layoutY="436.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Delivery Item">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="32.0" layoutY="540.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Place Order">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="35.0" layoutY="654.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Calculation">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="47.0" layoutY="771.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Log Out" wrappingWidth="98.0595703125">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

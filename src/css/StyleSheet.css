@@ -1,0 +1,10 @@
+.parent{
+    -fx-background-color:#F5F5F7;
+}
+
+.sidebar{
+    -fx-background-color:#203039;
+}
+.topbar {
+    -fx-background-color: rgb(2,0,36);
+}

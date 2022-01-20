@@ -1,0 +1,174 @@
+
+CREATE DATABASE IF NOT EXISTS lithophane;
+show databases;
+use lithophane;
+
+
+
+CREATE DATABASE IF NOT EXISTS lithophane;
+show databases;
+use lithophane;
+
+
+
+DROP TABLE IF EXISTS materialDetail;
+CREATE TABLE  materialDetail(
+    materialID VARCHAR(10),
+    materialDesc VARCHAR(100),
+    price INT(20),
+    weight INT(20),
+   
+    CONSTRAINT PRIMARY KEY (materialID)
+      );
+SHOW TABLES ;
+DESCRIBE materialDetail;
+
+
+DROP TABLE IF EXISTS `Customer`;
+CREATE TABLE IF NOT EXISTS Customer(
+	CustId VARCHAR(20),
+	CustName VARCHAR(100),
+	CustAddress VARCHAR(255),
+	CustNic VARCHAR(20),
+	Custphone VARCHAR(20),
+	 CONSTRAINT PRIMARY KEY (CustId)
+);
+SHOW TABLES;
+DESCRIBE Customer;
+
+
+DROP TABLE IF EXISTS `Orders`;
+
+CREATE TABLE Orders(
+    OrderID VARCHAR(20),
+    OrderDate VARCHAR(10),
+    CustID VARCHAR(20),
+    OderDes vARCHAR(100),
+     time VARCHAR(15),	
+    CONSTRAINT PRIMARY KEY (OrderID),
+    CONSTRAINT FOREIGN KEY (CustID) REFERENCES Customer(CustId) ON DELETE CASCADE ON UPDATE CASCADE
+    );
+SHOW TABLES ;
+DESCRIBE Orders;
+
+
+
+
+
+
+DROP TABLE IF EXISTS `Orders`;
+CREATE TABLE IF NOT EXISTS `Orders`(
+    OrderID VARCHAR(20),
+    OrderDate VARCHAR(10),
+    CustID VARCHAR(20),
+    totalAmount int,
+     
+    CONSTRAINT PRIMARY KEY (OrderID),
+    CONSTRAINT FOREIGN KEY (CustID) REFERENCES Customer(CustID) ON DELETE CASCADE ON UPDATE CASCADE
+    );
+SHOW TABLES ;
+DESCRIBE `Orders`;
+
+
+
+DROP TABLE IF EXISTS OrderDetail;
+CREATE TABLE IF NOT EXISTS OrderDetail(
+    OrderID VARCHAR(20),
+    ItemCode VARCHAR(20),
+    OrderQTY INT,
+    unitPrice int,
+    CusId VARCHAR(20),
+   
+    CONSTRAINT PRIMARY KEY (ItemCode,OrderID),
+    CONSTRAINT FOREIGN KEY (CusId) REFERENCES Customer(CustId) ON DELETE CASCADE ON UPDATE CASCADE ,
+    CONSTRAINT FOREIGN KEY (ItemCode) REFERENCES Item(ItemCode) ON DELETE CASCADE ON UPDATE CASCADE ,
+    CONSTRAINT FOREIGN KEY (OrderID) REFERENCES `Orders`(OrderID) ON DELETE CASCADE ON UPDATE CASCADE
+    );
+SHOW TABLES ;
+DESCRIBE OrderDetail
+
+
+
+CREATE TABLE IF NOT EXISTS DiliveryDetails(
+    DiliveryID VARCHAR(20),
+    CustID VARCHAR(20),
+    DiliveryAddress vARCHAR(100),
+    ContactNum 	varchar(20),
+    CONSTRAINT PRIMARY KEY (diliveryID),
+    CONSTRAINT FOREIGN KEY (CustID) REFERENCES Customer(CustID) ON DELETE CASCADE ON UPDATE CASCADE 
+   
+    );
+SHOW TABLES ;
+DESCRIBE `Orders`;
+
+
+
+
+
+
+
+
+
+CREATE TABLE IF NOT EXISTS Customer(
+	CustId VARCHAR(20),
+	CustName VARCHAR(100),
+	CustAddress VARCHAR(255),
+	CustNic VARCHAR(20),
+	Custphone VARCHAR(20)
+);
+SHOW TABLES;
+DESCRIBE Customer;
+
+
+
+CREATE TABLE IF NOT EXISTS Item(
+
+    ItemCode VARCHAR(20) PRIMARY KEY,
+    materialID VARCHAR(10),
+    unitPrice int(20),
+    Qty int(20),
+     itemDes VARCHAR(100),
+     CONSTRAINT FOREIGN KEY (materialID) REFERENCES materialDetail( materialID ) ON DELETE CASCADE ON UPDATE CASCADE
+    );
+SHOW TABLES ;
+DESCRIBE Item;
+
+
+
+
+DROP TABLE IF EXISTS OrderDetail;
+CREATE TABLE IF NOT EXISTS OrderDetail(
+    OrderID VARCHAR(20),
+    ItemCode VARCHAR(20),
+    OrderQTY INT(20),
+    CusId VARCAHR(10),
+   
+    CONSTRAINT PRIMARY KEY (ItemCode, OrderID),
+    CONSTRAINT FOREIGN KEY (CusId) REFERENCES Customer(CustId ) ON DELETE CASCADE ON UPDATE CASCADE ,
+    CONSTRAINT FOREIGN KEY (ItemCode) REFERENCES Item(ItemCode) ON DELETE CASCADE ON UPDATE CASCADE ,
+    CONSTRAINT FOREIGN KEY (OrderID) REFERENCES `Orders`(OrderID) ON DELETE CASCADE ON UPDATE CASCADE
+    );
+SHOW TABLES ;
+DESCRIBE OrderDetail
+
+
+
+DROP TABLE IF EXISTS  DiliveryDetails;
+
+CREATE TABLE IF NOT EXISTS DiliveryDetails(
+    DiliveryID VARCHAR(20),
+    custId Varchar(20),
+    DiliveryAddress vARCHAR(100),
+    ContactNum 	varchar(20),
+    CONSTRAINT PRIMARY KEY (diliveryID)
+  
+    );
+SHOW TABLES ;
+DESCRIBE `Orders`;
+
+
+
+
+
+
+

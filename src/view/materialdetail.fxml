@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="context" prefHeight="778.0" prefWidth="1070.0" style="-fx-background-color: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.materialController">
+   <children>
+      <Text fill="WHITE" layoutX="47.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Material" wrappingWidth="149.1640625">
+         <font>
+            <Font name="System Bold" size="37.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="52.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Material Id    :">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Text>
+      <TextField fx:id="materialId" layoutX="221.0" layoutY="74.0" prefHeight="37.0" prefWidth="255.0" promptText="Material Id" />
+      <Text fill="WHITE" layoutX="506.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price                  :">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <TextField fx:id="materialPrice" layoutX="704.0" layoutY="74.0" prefHeight="37.0" prefWidth="323.0" promptText="Price" />
+      <Text fill="WHITE" layoutX="54.0" layoutY="169.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Weight         :">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Text>
+      <TextField fx:id="materialWeight" layoutX="221.0" layoutY="141.0" prefHeight="37.0" prefWidth="255.0" promptText="Weight" />
+      <TextField fx:id="materialDes" layoutX="704.0" layoutY="146.0" prefHeight="66.0" prefWidth="323.0" promptText="Material Description" />
+      <Text fill="WHITE" layoutX="495.0" layoutY="184.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Material Des      :">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <TableView fx:id="tblmaterial" layoutX="52.0" layoutY="239.0" prefHeight="404.0" prefWidth="985.0">
+        <columns>
+          <TableColumn fx:id="colMaterialId" prefWidth="160.0" text="Material Id" />
+          <TableColumn fx:id="colPrice" prefWidth="183.0" text="Price" />
+            <TableColumn fx:id="colWeight" prefWidth="259.0" text="Weight" />
+            <TableColumn fx:id="colMaterialDes" prefWidth="379.0" text="Material Description" />
+        </columns>
+      </TableView>
+      <Button layoutX="52.0" layoutY="680.0" mnemonicParsing="false" onAction="#addMaterialOnAction" prefHeight="37.0" prefWidth="177.0" style="-fx-background-color: #20bf6b;" text="Add Material" />
+      <Button layoutX="456.0" layoutY="680.0" mnemonicParsing="false" onAction="#updateMaterialOnAction" prefHeight="37.0" prefWidth="177.0" style="-fx-background-color: #fed330;" text="Update Material" />
+      <Button layoutX="850.0" layoutY="680.0" mnemonicParsing="false" onAction="#deleteMaterialOnAction" prefHeight="37.0" prefWidth="177.0" style="-fx-background-color: red;" text="Delete Material" textFill="WHITE" />
+   </children>
+</AnchorPane>
